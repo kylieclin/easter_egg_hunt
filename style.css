@@ -1,0 +1,392 @@
+body{
+    font-family: 'Baloo', cursive;
+    margin: 0;
+    background-color:  #fef3bb;
+}
+
+a {
+    color: white;
+    text-decoration: none; 
+}
+
+a:hover{
+    font-size: 1.2rem;
+    color: #21360a;
+}
+
+.headerArea{
+    height: 18vh;
+    font-size: 0;
+    border-bottom: 5px solid #a5683b;
+    background-color: #74a53b;  
+}
+.mainLogo{
+    width: 16.6%
+}
+.mainHeader{
+    width: 66%;
+    position: relative;
+}
+.mainLogo, .mainHeader{
+    color: white;
+    height: 100%;
+    display: inline-block;
+}
+
+.centereHeader{
+    /* position absolute important */
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    font-size: 6vh;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.logoimg{
+    height: 100%;
+    width: auto;
+}
+
+.maincontent{
+    height: 75vh;
+    background-color: #f69db3;
+    font-size: 0;
+    display: flex;
+}
+
+.sidebar{
+    width: 16.6%;
+    background-color: #fef3bb;
+    font-size: 1rem;
+    position: relative;
+}
+
+.status{
+    height: 50%;
+    border: 5px solid #a5683b;
+    margin: 20px 5px 5px 5px;
+    padding-left: 5px;
+    font-size: 4vh;
+    background-color: #96552b;
+    position: relative;
+}
+.buttons{
+    height: 12%;
+    position: relative;
+}
+
+.reset {
+    background-color: #96552b;
+    color: #cda485;
+    outline: none;
+    display: block;
+    font-family: 'Baloo', cursive;
+    font-weight: 600;
+    font-size: 1.7em;
+    height: auto;
+    width: 96%;
+    border: 5px solid #a5683b;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.reset:hover{
+    background-color: #7e441d;
+}
+
+.chocolateeggdiv{
+    margin: 10px 5px 5px 5px;
+    height: 25%;
+    width:96%;
+    position: relative;
+
+}
+
+.chocolateeggs{
+    top:20%;
+    width: 80%;
+    height: auto;
+    position: relative;
+    margin-left:10%;
+}
+
+.chocolateeggs:hover, .backimg:hover{
+    -webkit-animation: giftegg 0.5s; /* Safari 4.0 - 8.0 */
+    animation: giftegg 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.game-area{
+    width: 66.8%;
+    height: 100%;
+    background-color:  #fef3bb;
+}
+
+.sidebar, .game-area{ 
+    color: #cda485;
+}
+
+.cardContainer{
+    width: 16.66%;
+    height: 32%;
+    display: inline-block;
+}
+
+.card{ 
+    /* card div is to avoid using margin but let card in right position */
+    left:5%;
+    top:5%;
+    width: 90%;
+    height:90%;
+    position: relative;
+    border-radius: 20%;  
+}
+
+.front, .back{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /* absolute to make the cards place on each other */
+    transition-duration: 5s;
+    cursor: grab;
+}
+
+.backHide{
+    transition-duration: 5s;
+    display: none;
+}
+
+.frontimg, .backimg{
+    height: 100%;
+    width: 100%;
+    border-radius:20%;   
+}
+
+.rightsideinner{
+    width: 98%;
+    height: 48%;
+    display:inline-block;
+    margin: 0;
+    position: relative;
+}
+
+.rabbiteggs{
+    margin-top: 2px;
+    width: 30%;
+    height:30%;
+}
+
+.rabbit{
+    top: 35%;
+    width:60%;
+    height: 70%;
+    position: absolute;
+}
+
+.rabbit, .rabbiteggs, .winningMove, .logoimg {
+    -webkit-animation: rotatemove 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: rotatemove 5s infinite;
+}
+
+.popuptext{
+    visibility: hidden;
+    background-color: #96552b;
+    color: #cda485;
+    text-align: center;
+    border-radius: 6px;
+    position: relative;
+    font-size: 150%;
+    width: 60%;
+    height: 15%;
+    left: 15%;
+    margin: 20px 0 10px 0;
+}
+
+.popuptext::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #96552b transparent transparent transparent;
+}
+.showMatch {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.footer{
+    height: 5vh;
+    background-color: #74a53b;  ;
+    border-top: 5px solid #a5683b;
+    text-align: center;
+    font-size: 0.8rem;
+    color: white; 
+
+}
+
+.aboutme{
+    position: relative;
+    float: right;
+    text-align: right;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white; 
+    margin-right: 10px;
+}
+
+.match{
+    -webkit-animation: wave 0.5s;
+    animation: wave 0.5s;
+}
+
+.openModal, .winModal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 5%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #fdf2ba; /* Fallback color */
+  background-color: rgba(253, 242, 186,0.4); /* Black w/ opacity */
+}
+
+.openModal {
+    display: block;
+}
+
+.winModal{
+    display: none;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 5%;
+  border: 1px solid #f3e6a7;
+  width: 50%;
+  height: 45%;
+  text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: #74a53b;
+  float: right;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #507922;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.openText, .winningText{
+    font-size:2em;
+    color: #74a53b;
+    text-shadow: -1px 0 #f3e6a7, 0 1px #f3e6a7, 1px 0 #f3e6a7, 0 -1px #f3e6a7;
+    transition-duration: 1s;
+}
+
+.giftegg{
+    height: 28vh;
+    width:auto;
+    padding-top: 5%;
+    position: relative;
+    -webkit-animation: giftegg 0.5s; /* Safari 4.0 - 8.0 */
+    animation: giftegg 0.5s infinite;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+  
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes rotatemove {
+    0% {transform: rotate(-10deg);}
+    50% {transform: rotate(15deg);}
+    100% {transform: rotate(-10deg);}
+}
+
+/* Standard syntax */
+@keyframes rotatemove {
+    0% {transform: rotate(-10deg);}
+    50% {transform: rotate(15deg);}
+    100% {transform: rotate(-10deg);}
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes wava {
+    0% {transform: rotate(360deg);}
+
+}
+  
+  /* Standard syntax */
+@keyframes wave {
+    0% {transform: rotate(360deg);}
+}
+
+@keyframes giftegg {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@media only screen and (max-width: 600px) {
+    .sidebar{
+    display: none;
+    }
+    .game-area{
+        width: 100%;
+    }
+    .mainLogo{
+        display:none;
+    }
+    .logoLeft{
+        width: 20%;
+        display: inline-block;
+    }
+    .mainHeader{
+        width:80%;
+    }
+    .centereHeader{
+        font-size: 30px;
+    }
+    .cardContainer{
+        width: 33%;
+        height: 33%;
+    }
+    .footer{
+        display:none;
+    }
+    .giftegg{
+        display:none;
+    }
+}
