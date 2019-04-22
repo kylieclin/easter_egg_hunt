@@ -71,10 +71,10 @@ class MemoryMatchGame{
         if(this.first_card_clicked === this.second_card_clicked){
             this.card_match();  
         } else { 
-            setTimeout(card.flip_back, 1500);
+            setTimeout(card.flip_back, 1200);
             this.clickedCard[0].first = false;
         }
-        setTimeout(this.reset_checking, 1500);
+        setTimeout(this.reset_checking, 1200);
         this.clickedCard =[];
     }
     reset_checking(){
@@ -96,6 +96,7 @@ class MemoryMatchGame{
         }
     }
     game_won(){
+        this.winAudio.volume = 0.4;
         this.backgroundAudio.pause();
         this.winAudio.play();
         this.display.display_win();
