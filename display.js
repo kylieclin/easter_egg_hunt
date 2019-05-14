@@ -1,6 +1,6 @@
 class Display{
     constructor(){
-        this.accuracy = '';
+        this.accuracy = '0.00%';
     }
     display_stats(attempts, matchcounter, games_played){
         this.calculate_stats(attempts, matchcounter);
