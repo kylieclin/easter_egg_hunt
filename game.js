@@ -108,7 +108,11 @@ class MemoryMatchGame{
     }
     play_audio(){
         this.autoOn = !this.autoOn;
-        this.backgroundAudio.play();
+        if(this.autoOn){
+            this.backgroundAudio.play(); 
+        } else {
+            this.backgroundAudio.pause();
+        }
     }
     reset_stats(){
         this.games_played++;
