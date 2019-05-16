@@ -13,11 +13,13 @@ class Cards{
         this.first = false;
         this.handle_click = this.handle_click.bind( this );
     }
+
     handle_click(){
         if(!this.first){
           this.callback.click(this);  
         }
     }
+
     create_cards(){            
         this.domElement.parent = $('<div>').addClass('card');
         this.domElement.parent.click(this.handle_click);
@@ -47,9 +49,11 @@ class Cards{
     flip_card(){
         this.domElement.back.hide(); 
     }
+
     flip_back(){
         $('.backimg').show();
     }
+    
     get_clickedCard(){
         return this.front;  
     }

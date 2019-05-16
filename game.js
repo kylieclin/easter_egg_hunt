@@ -11,10 +11,12 @@ class MemoryMatchGame{
         this.clickedCard = [];
         this.checking = false;
         this.autoOn = false;
+
         this.display = new Display();
         this.backgroundAudio = new Audio('audio/twodots.mp3');
         this.matchAudio = new Audio('audio/suspension.mp3');
         this.winAudio= new Audio('audio/Cartoon_Bank_Heist_Sting.mp3');
+
         this.generate_cards = this.generate_cards.bind(this);
         this.click_handler = this.click_handler.bind(this);
         this.reset_stats = this.reset_stats.bind(this);
@@ -22,6 +24,7 @@ class MemoryMatchGame{
         this.play_audio = this.play_audio.bind(this);
         this.reset_checking = this.reset_checking.bind(this);
     }
+
     generate_cards(){
         $('.openModal').remove();
         $('.cardContainer').remove();
@@ -36,12 +39,14 @@ class MemoryMatchGame{
             copyArr.splice(index,1);
         }
     }
+
     add_eventListener(){
         $('.openModal').on('click',this.generate_cards);  
         $('.close').on('click',this.display.close_modal); 
         $('.reset').on('click', this.reset_stats);
         $('.chocolateeggdiv').on('click', this.play_audio);   
     }
+
     click_handler(card){
         if(!this.checking){
             card.flip_card();            
@@ -60,14 +65,16 @@ class MemoryMatchGame{
                 this.render_status();
             } 
         }
-        
     }
+
     disable_cards(){
         $('.card').off('click', this.click_handler);
     }
+
     disable_clickForMatch(){
         $('.match').off('click');
-    }    
+    } 
+
     check_if_match(card){
         if(this.first_card_clicked === this.second_card_clicked){
             this.card_match();  
@@ -78,9 +85,11 @@ class MemoryMatchGame{
         setTimeout(this.reset_checking, 1200);
         this.clickedCard =[];
     }
+
     reset_checking(){
         this.checking = false;
     }
+
     card_match(){
         if(this.autoOn){
             this.matchAudio.play(); 
@@ -98,6 +107,7 @@ class MemoryMatchGame{
            setTimeout(this.game_won, 500);
         }
     }
+
     game_won(){
         if(this.autoOn){
             this.backgroundAudio.pause();
@@ -106,6 +116,7 @@ class MemoryMatchGame{
         }
         this.display.display_win();
     }
+
     play_audio(){
         this.autoOn = !this.autoOn;
         if(this.autoOn){
@@ -114,6 +125,7 @@ class MemoryMatchGame{
             this.backgroundAudio.pause();
         }
     }
+
     reset_stats(){
         this.games_played++;
         this.attempts = 0;
@@ -122,6 +134,7 @@ class MemoryMatchGame{
         this.render_status();
         this.generate_cards();
     }
+    
     render_status(){
         this.display.display_stats(this.attempts, this.match_counter, this.games_played);
     }
