@@ -1,4 +1,4 @@
-# <a href="https://easter.kyliechao.com/" target="_blank" Easter Egg Hunt</a>
+# <a href="https://easter.kyliechao.com/" target="_blank"> Easter Egg Hunt</a>
 Card matching concentration game in Easter theme.
 
 Click on the title above to visit the live site
