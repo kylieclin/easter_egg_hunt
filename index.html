@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Memory Match</title>
+    <title>Easter Eggs Hunt</title>
     <link rel="icon" type="image/png" href="images/rabbitegg.png" />
     <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -16,75 +16,80 @@
     <div class="container">
 <!-- Header Area -->
         <div class="headerArea">
-            <div class="mainLogo logoLeft">
-                <a href="#"><img class='logoimg' src='images/cloud.png'alt="cloud"></a>
-            </div>
-
             <div class="mainHeader">
-                <img class='logoimg bee' src='images/bee.png'alt="bee">
-                <div class="centereHeader">Easter Eggs Hunting</div>
+                <div class="mainLogo">
+                    <img class='logoimg' src='images/cloud.png'alt="cloud">
+                </div>
+                <div  class="centerHeader">
+                    <h1>Easter Egg Hunt</h1>
+                </div>
+                <div class="mainLogo">
+                    <img class='logoimg' src='images/cloud.png'alt="cloud">
+                </div>
             </div>
-
-            <div class="mainLogo">
-                <a href="#"><img class='logoimg' src='images/cloud.png'alt="cloud"></a>
-            </div>
-
         </div>
 <!-- Main Container -->
         <div class="maincontent">
             <!-- sidebar left -->
             <div class="sidebar">
-                <div class="status">
-                    <div class="gamePlayed">
-                        <div class="label">Game Played</div><div class="value">0</div>
+                <div class="status-board">
+                    <div class="status">
+                        <div class="gamePlayed">
+                            <div class="label">Games Played</div><div class="value">0</div>
+                        </div>
+                        <div class="attempts">
+                            <div class="label">Attempts</div><div class="value">0 </div>
+                        </div>
+                        <div class="accuracy">
+                            <div class="label">Accuracy</div><div class="value">0 </div>
+                        </div>                    
                     </div>
-                    <div class="attempts">
-                        <div class="label">Attempts</div><div class="value">0 </div>
+                    <div class="buttons">
+                        <button class="reset">Reset</button>
                     </div>
-                    <div class="accuracy">
-                        <div class="label">Accuracy</div><div class="value">0 </div>
-                    </div>                    
-                </div>
-                <div class="buttons">
-                    <button class="reset">Reset Game</button>
                 </div>
                 <div class="chocolateeggdiv">
-                    <img class='chocolateeggs' src="images/chocolateeggs.png" alt="chocolateeggs">
+                    <img class='chocolateeggs' src="images/chocolateeggs.png" alt="chocolateeggs" title="Click turn music on/off">
                 </div>
             </div>
             <!-- game area -->
-            <div id="gameArea" class="game-area">
-            </div>
+            <div id="gameArea" class="game-area"></div>
             <!-- sidebar right -->
             <div class="sidebar">
-
-                <div class="rightsideinner rabbiteggsdiv">
-                </div>
-
+                <div class="rightsideinner rabbiteggsdiv"></div>
                 <div class="rightsideinner">
-                    <p class='popuptext'>MATCH <i class="far fa-heart"></i></p>
-                    <img class='rabbit' src="images/rabbit_with_chocolate.png" alt="rabbit">   
+                    <p class='popuptext'>MATCH</p>
+                    <div class="rabbit-box">
+                        <img class='rabbit' src="images/rabbit_with_chocolate.png" alt="rabbit">
+                    </div>
                 </div> 
             </div>
 
         </div>
 <!-- footer -->
         <div class="footer">
-            Enjoy this game and happy Easter!
-            <div class="aboutme"><a href="https://www.linkedin.com/in/kyliechao">About Kylie</a></div>
+            <div class="aboutme">
+                <a href="https://www.kyliechao.com" title="Link to Kylie's portfolio" target="_blank">copyright&copy; 2019 www.kyliechao.com</a>
+            </div>
         </div>
         <!-- Modal -->
             <div id="opening" class="openModal">
                 <div class="modal-content">
-                    <div class="openText">Bunny needs your help for Easter!<br>Click to start</div>
-                    <img class='giftegg' src="images/chocolateeggs.png" alt="chocolateegg">
+                    <div class="openText">
+                        <h1>Bunny needs your help!<br>Click to start!</h1>
+                    </div>
+                    <div class="giftegg-box">
+                        <img class='giftegg' src="images/rabbitegg.png" alt="rabbitegg">
+                    </div>
                 </div>
             </div>
             <div id="winModal" class="winModal">
                 <div class="modal-content">
                   <span class="close">&times;</span>
-                  <div class="winningText">You've collect all the Easter eggs</div>
-                  <img class='giftegg' src="images/giftegg.png" alt="giftegg">
+                  <h1 class="winningText">You've collect all the Easter eggs</h1>
+                  <div class="giftegg-box">
+                    <img class='giftegg' src="images/giftegg.png" alt="giftegg"> 
+                  </div> 
                 </div>
             </div>
         </div>
