@@ -193,7 +193,7 @@ a:hover{
 .popuptext {
     visibility: hidden;
     width: 70%;
-    height: 20%;
+    height: 30%;
     position: relative;
     left: 10%;
     margin: 0 0 20px 0;
@@ -236,8 +236,7 @@ a:hover{
 
 .aboutme {
     position: relative;
-    float: right;
-    text-align: right;
+    text-align: center;
     text-decoration: none;
     color: white; 
     margin-right: 10px;
