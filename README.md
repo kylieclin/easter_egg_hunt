@@ -13,7 +13,7 @@ Click on the title above to visit the live site
 - Tools used:
    - GitHub
    - Git
-   - Visual Studio
+   - Visual Studio Code
    - Adobe Photoshop
 
 ### Setup Instructions
