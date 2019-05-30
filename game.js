@@ -120,9 +120,11 @@ class MemoryMatchGame{
     play_audio(){
         this.autoOn = !this.autoOn;
         if(this.autoOn){
-            this.backgroundAudio.play(); 
+            this.backgroundAudio.play();
+            $(".music-text").text("Music: ON"); 
         } else {
             this.backgroundAudio.pause();
+            $(".music-text").text("Music: OFF"); 
         }
     }
 
