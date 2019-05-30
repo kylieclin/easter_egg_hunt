@@ -388,10 +388,6 @@ h1 {
         width: 90%;
     }
 
-    .centerHeader h1 {
-        line-height: unset;
-    }
-
     .sidebar {
         display: none;
     }
