@@ -41,7 +41,7 @@ class Display{
         setTimeout(function(){
             $('.winningText').text('Happy Easter!')
             $('.giftegg').attr('src','images/rabbit_in_egg.png').css('animation','rotatemove 2s infinite');
-        },4500)
+        },3000)
     }
 
     close_modal(){
