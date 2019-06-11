@@ -135,6 +135,7 @@ a:hover{
     display: inline-block;
     width: 16.66%;
     height: 32%;
+    user-select: none; 
 }
 
 .card { 
